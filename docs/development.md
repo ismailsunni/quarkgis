@@ -36,6 +36,25 @@ Stack: Vite, TypeScript, Svelte 5, OpenLayers, qgis-js 4.2.3 (pinned), SQLite WA
 | `tests/` | Unit and end-to-end tests, reference projects |
 | `scripts/` | Generated assets and checks against QGIS Desktop |
 
+## Generated assets
+
+Run with QGIS Desktop's Python, e.g. `QT_QPA_PLATFORM=offscreen PYTHONPATH=/usr/share/qgis/python python3 …`:
+
+| Script | Output |
+| --- | --- |
+| `scripts/make_demo_project.py` | `public/projects/world` demo (Natural Earth) |
+| `scripts/make_templates.py` | Empty project, default symbols and label settings |
+| `scripts/make_functions.py` | Expression function list for the builder |
+| `scripts/make_reference_projects.py` | 10 reference projects and their Desktop renders |
+| `scripts/check_roundtrip.py` | Verifies projects saved by the round-trip test in Desktop |
+| `scripts/compare_processing.py` | Compares processing outputs with Desktop's algorithms |
+
+`node scripts/hub-mirror.mjs` mirrors the QGIS Hub into `public/hub` (hub.qgis.org doesn't send CORS headers; the deploy refreshes it weekly).
+
+## Continuous integration
+
+`.github/workflows/test.yml` runs the unit tests, the Playwright suite, and the Desktop round-trip check in the `qgis/qgis` container. Pushes to `main` deploy the app and this documentation to GitHub Pages; a service worker (`public/sw.js`) provides cross-origin isolation there and caches the engine.
+
 ## Tests
 
 - **Unit tests** (Vitest) cover parsers, classification breaks (checked against QGIS's), coordinates and statistics.
