@@ -18,8 +18,8 @@
 </p>
 
 <p align="center">
-  <a href="https://ismailsunni.id/quarkgis/"><img alt="Launch the web app" src="https://img.shields.io/badge/Launch-web%20app-589632?style=for-the-badge&logo=webassembly&logoColor=white" height="36"></a>
-  <a href="https://ismailsunni.id/quarkgis/docs/"><img alt="Read the documentation" src="https://img.shields.io/badge/Read-the%20docs-0e9384?style=for-the-badge&logo=materialformkdocs&logoColor=white" height="36"></a>
+  <a href="https://quarkgis.org/"><img alt="Launch the web app" src="https://img.shields.io/badge/Launch-web%20app-589632?style=for-the-badge&logo=webassembly&logoColor=white" height="36"></a>
+  <a href="https://quarkgis.org/docs/"><img alt="Read the documentation" src="https://img.shields.io/badge/Read-the%20docs-0e9384?style=for-the-badge&logo=materialformkdocs&logoColor=white" height="36"></a>
 </p>
 
 <p align="center">
@@ -70,13 +70,13 @@
 | **Sharing** | Links that open at a view, published maps (GitHub gists) with versions and secrets removed, embedding with a postMessage API, PNG and PDF map export |
 | **Interface** | Action search (Ctrl+K), keyboard shortcuts, a welcome tour, dark mode, phone layout, English, German, French, Spanish and Indonesian |
 
-The [user guide](https://ismailsunni.id/quarkgis/docs/getting-started/) covers each area, [data formats](https://ismailsunni.id/quarkgis/docs/data-formats/) lists what opens, edits and exports, and the [comparison](docs/feature-comparison.md) sets QuarkGIS beside GeoLibre and RustGIS.
+The [user guide](https://quarkgis.org/docs/getting-started/) covers each area, [data formats](https://quarkgis.org/docs/data-formats/) lists what opens, edits and exports, and the [comparison](docs/feature-comparison.md) sets QuarkGIS beside GeoLibre and RustGIS.
 
 ## Get started
 
-Open **[ismailsunni.id/quarkgis](https://ismailsunni.id/quarkgis/)** in a recent desktop Chrome, Edge or Firefox, then open a project folder, a project file, or try the demo. The QGIS engine (about 20 MB) is downloaded once and cached.
+Open **[quarkgis.org](https://quarkgis.org/)** in a recent desktop Chrome, Edge or Firefox, then open a project folder, a project file, or try the demo. The QGIS engine (about 20 MB) is downloaded once and cached.
 
-Open a project from the web with `?url=`, for example [the demo project](https://ismailsunni.id/quarkgis/?url=projects/world/world.qgz). See [Sharing and embedding](https://ismailsunni.id/quarkgis/docs/guide/sharing/) for links, published maps and the embed API.
+Open a project from the web with `?url=`, for example [the demo project](https://quarkgis.org/?url=projects/world/world.qgz). See [Sharing and embedding](https://quarkgis.org/docs/guide/sharing/) for links, published maps and the embed API.
 
 To host it yourself, build the static site (below) and serve `dist/` with `Cross-Origin-Opener-Policy: same-origin` and `Cross-Origin-Embedder-Policy: require-corp`, or keep the bundled service worker that adds them.
 
@@ -91,11 +91,11 @@ npm run test:e2e   # Playwright: renders compared with QGIS Desktop, round-trips
 npm run build      # static site in dist/
 ```
 
-Built with Vite, TypeScript, Svelte 5, OpenLayers, qgis-js (QGIS 4.2), SQLite WebAssembly, GEOS WebAssembly and proj4. The [development guide](https://ismailsunni.id/quarkgis/docs/development/) has the code map, tests, generated assets and how to add a translation.
+Built with Vite, TypeScript, Svelte 5, OpenLayers, qgis-js (QGIS 4.2), SQLite WebAssembly, GEOS WebAssembly and proj4. The [development guide](https://quarkgis.org/docs/development/) has the code map, tests, generated assets and how to add a translation.
 
 ## How it works
 
-The open project is kept as its QGIS XML: every change is written into it and QGIS reloads it, so the map is always what Desktop will show. QGIS renders the map; web tiles and images it can't fetch yet are drawn by OpenLayers in their place in the layer stack. Edits are SQL on the GeoPackage with the official SQLite WebAssembly build, processing runs in GEOS (the library behind QGIS's native algorithms), and CRS definitions come from QGIS's own database. More in [How it works](https://ismailsunni.id/quarkgis/docs/how-it-works/), including the current limitations.
+The open project is kept as its QGIS XML: every change is written into it and QGIS reloads it, so the map is always what Desktop will show. QGIS renders the map; web tiles and images it can't fetch yet are drawn by OpenLayers in their place in the layer stack. Edits are SQL on the GeoPackage with the official SQLite WebAssembly build, processing runs in GEOS (the library behind QGIS's native algorithms), and CRS definitions come from QGIS's own database. More in [How it works](https://quarkgis.org/docs/how-it-works/), including the current limitations.
 
 ## License and credits
 

@@ -3,7 +3,7 @@
 A page that embeds QuarkGIS in an iframe can drive the map and listen to it with `postMessage`.
 
 ```html
-<iframe id="map" src="https://ismailsunni.id/quarkgis/?url=https://example.org/project.qgz&maponly"
+<iframe id="map" src="https://quarkgis.org/?url=https://example.org/project.qgz&maponly"
         width="800" height="500" allow="cross-origin-isolated"></iframe>
 ```
 

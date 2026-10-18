@@ -32,8 +32,6 @@ jobs:
         run: node scripts/hub-mirror.mjs
         continue-on-error: true
       - run: npm run build
-        env:
-          BASE_PATH: /${{ github.event.repository.name }}/
       - uses: actions/setup-python@v7
         with:
           python-version: "3.12"

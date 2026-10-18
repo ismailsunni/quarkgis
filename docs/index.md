@@ -9,7 +9,7 @@ hide:
 
 QuarkGIS runs [QGIS](https://qgis.org) compiled to WebAssembly ([qgis-js](https://github.com/qgis/qgis-js)), so a `.qgs` / `.qgz` project looks the same as in QGIS Desktop: same symbols, same labels, same CRS. There's nothing to install and no server: projects and data stay in your browser.
 
-[Open the app](https://ismailsunni.id/quarkgis/){ .md-button .md-button--primary }
+[Open the app](https://quarkgis.org/){ .md-button .md-button--primary }
 [Get started](getting-started.md){ .md-button }
 [Source on GitHub](https://github.com/ismailsunni/quarkgis){ .md-button }
 
