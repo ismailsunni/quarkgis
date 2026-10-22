@@ -156,7 +156,7 @@
     <header class="topbar">
       <div class="brand"><span class="logo"></span>QuarkGIS</div>
       <div class="project-name">
-        {#if ui.phase === "ready"}<button title={t("Project properties")} onclick={() => (ui.dialog = "project")}>{ui.projectName}</button>{/if}{#if ui.dirty}<span class="dirty" title={t("Unsaved changes")}>•</span>{/if}
+        {#if ui.phase === "ready"}<button title={t("Project properties")} onclick={() => (ui.dialog = "project")}>{ui.projectName || t("Untitled")}</button>{/if}{#if ui.dirty}<span class="dirty" title={t("Unsaved changes")}>•</span>{/if}
       </div>
       <button class="palette-btn" data-tour="search" onclick={() => (ui.palette = true)}>
         <Icon name="search" size={16} /> {t("Search actions")} <kbd>Ctrl K</kbd>
